@@ -3,9 +3,11 @@ import React from 'react'
 import Images from '../images/Images'
 import Skills from "../skills/Skills"
 
+
 const Principal = () => {
   return (
     <div>
+          
           <Images/>
           <About/>
           <Skills/>
