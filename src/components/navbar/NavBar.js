@@ -9,10 +9,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import Image from "../utils/image.png"
-import Principal from "./Principal";
+import Image from "../../utils/image.png"
+import Principal from "../principal/Principal";
 
-const pages = ["Proyects", "Skills", "About", "Contact"];
+const pages = [ "Proyects", "Skills", "About", "Contact"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -91,11 +91,20 @@ const ResponsiveAppBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+             
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Proyects</Typography>
                 </MenuItem>
-              ))}
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Skills</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">About</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Contact</Typography>
+                </MenuItem>
+            
             </Menu>
           </Box>
           
@@ -120,15 +129,40 @@ const ResponsiveAppBar = () => {
             
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            
               <Button
-                key={page}
+                
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
+                href="#proyects"
               >
-                {page}
+                Proyects
               </Button>
-            ))}
+              <Button
+                
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+                href="#skills"
+              >
+                Skills
+              </Button>
+              <Button
+                
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+                href="#about"
+              >
+                About
+              </Button>
+              <Button
+                
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+                href="#contact"
+              >
+                Contact
+              </Button>
+            
           </Box>
         </Toolbar>
       </Container>
