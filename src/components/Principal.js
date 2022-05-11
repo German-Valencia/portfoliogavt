@@ -1,24 +1,23 @@
-
-import NavBar from './NavBar'
-import Image from '../utils/codigo.png'
+import About from "./About"
+import Image3 from "../utils/codigo2.jpg"
+import Image2 from '../utils/codigo.png'
 import React from 'react'
 
 const Principal = () => {
   return (
     <div>
-        <NavBar/>
         <img
-            src={Image}
+            src={Image2}
             alt="codigo"
-            width="1700px"
-            height="1700px"
-            style={{
-              marginRight: "20px",
-              marginBottom: "20px",
-              marginTop: "20px",
-              borderRadius: "35px"
-            }}
+            height="auto"
           />
+          <img
+            src={Image3}
+            alt="codigo2"
+            height="527px"
+            width="960px"
+          />
+          <About/>
     </div>
   )
 }

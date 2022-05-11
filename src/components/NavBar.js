@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "../utils/image.png"
+import Principal from "./Principal";
 
 const pages = ["Proyects", "Skills", "About", "Contact"];
 
@@ -25,6 +26,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
+    <div>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -131,6 +133,8 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+      <Principal/>
+    </div>
   );
 };
 export default ResponsiveAppBar;
