@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import Image from "../utils/image.png"
 
 const pages = ["Proyects", "Skills", "About", "Contact"];
 
@@ -28,7 +28,18 @@ const ResponsiveAppBar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+        <img
+            src={Image}
+            alt="imagen1"
+            width="70"
+            height="70"
+            style={{
+              marginRight: "20px",
+              marginBottom: "20px",
+              marginTop: "20px",
+              borderRadius: "35px"
+            }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -42,9 +53,11 @@ const ResponsiveAppBar = () => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              marginRight: "600px",
+              marginLeft: "10px"
             }}
           >
-            LOGO
+            GERMAN VALENCIA
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -83,9 +96,9 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href=""
@@ -98,9 +111,11 @@ const ResponsiveAppBar = () => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              marginLeft: "10px"
             }}
           >
-            LOGO
+            GERMAN
+            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
